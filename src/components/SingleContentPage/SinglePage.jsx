@@ -27,7 +27,9 @@ const SinglePage = () => {
   const [favMovies, setFavMovies] = useState([]);
 
   const addToFav = (movie) => {
-    setFavMovies([...favMovies, movie]);
+    if (!favMovies.includes(movie)) {
+      setFavMovies([...favMovies, movie]);
+    }
   };
 
   const fetchData = async () => {
