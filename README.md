@@ -40,10 +40,3 @@ These instructions will get you a copy of the project up and running on your loc
 MIT License
 
 Copyright (c) 2022 Nelson Enyinnaya
-
-<!-- <div>
-      <kbd><img src="https://drive.google.com/uc?id=1-Ne-XbWZt1y2Tj6rh3VcJ2eQPcZXC0ci"  height='535' width='440' /> </kbd>
-      <kbd><img src="https://drive.google.com/uc?id=1aK9Y8T847hrKUvVxHXkN3I9Ch2fam3Dz" height='535' width='290' /></kbd>
-</div> -->
-
-<!-- ----------------------------------------------------------------------------------- -->

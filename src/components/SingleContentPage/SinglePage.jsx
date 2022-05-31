@@ -24,6 +24,11 @@ const SinglePage = () => {
   const [color, setColor] = useState("grey");
   const history = useHistory();
   const { id, mediaType } = useParams();
+  const [favMovies, setFavMovies] = useState([]);
+
+  const addToFav = (movie) => {
+    setFavMovies([...favMovies, movie]);
+  };
 
   const fetchData = async () => {
     try {
@@ -154,9 +159,24 @@ const SinglePage = () => {
 
                   <div className="videopage">
                     {content && (
-                      <SingleVideoPage trailer={video} title={content.title} />
+                      <>
+                        <SingleVideoPage
+                          trailer={video}
+                          title={content.title}
+                        />
+
+                        <button
+                          onClick={() => addToFav(content.title)}
+                          className="favbutton"
+                        >
+                          {favMovies.includes(content.title)
+                            ? "Added"
+                            : "Add to Favorites"}
+                        </button>
+                      </>
                     )}
                   </div>
+
                   <div className="tagline">
                     <h5>{content.tagline}</h5>
                   </div>

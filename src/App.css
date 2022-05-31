@@ -41,3 +41,17 @@
     transform: rotate(360deg);
   }
 }
+
+.favbutton {
+  padding: 10px 20px;
+  background: transparent;
+  border-radius: 5px;
+  margin-top: 10px;
+  color: #fff;
+  border: 1px solid #a68eff
+}
+.favbutton:hover {
+  background-color: #a68eff;
+  color:#fff;
+  border: 1px solid #fff
+}
