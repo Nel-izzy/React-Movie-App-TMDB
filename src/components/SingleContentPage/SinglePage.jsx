@@ -10,7 +10,7 @@ import Myloader from "react-spinners/ClipLoader";
 import Carousel from "../Carousel/Carousel";
 import $ from "jquery";
 
-const SinglePage = () => {
+const SinglePage = ({ favMovies, addToFav }) => {
   $(function () {
     $(".ico").on("click", function () {
       $(".ico").toggleClass("press", 1000);
@@ -24,13 +24,12 @@ const SinglePage = () => {
   const [color, setColor] = useState("grey");
   const history = useHistory();
   const { id, mediaType } = useParams();
-  const [favMovies, setFavMovies] = useState([]);
 
-  const addToFav = (movie) => {
-    if (!favMovies.includes(movie)) {
-      setFavMovies([...favMovies, movie]);
-    }
-  };
+  // const addToFav = (movie) => {
+  //   if (!favMovies.includes(movie)) {
+  //     setFavMovies([...favMovies, movie]);
+  //   }
+  // };
 
   const fetchData = async () => {
     try {

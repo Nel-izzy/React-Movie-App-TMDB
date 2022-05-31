@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Treading from "../../pages/TreadingShows/Treading";
 import Home from "../../pages/Home/Home";
 import Movies from "../../pages/Movies/Movies";
@@ -10,6 +11,14 @@ import CopyWrite from "../../components/CopyWrite__footer/LastFooter";
 import BottomNav from "../../components/MainNavbar/BottomNav";
 
 const Routes = () => {
+  const [favMovies, setFavMovies] = useState([]);
+
+  const addToFav = (movie) => {
+    if (!favMovies.includes(movie)) {
+      setFavMovies([...favMovies, movie]);
+    }
+  };
+
   return (
     <>
       <MainNav />
@@ -23,7 +32,10 @@ const Routes = () => {
           <Route path="/:media-:id-category/" children={<Movies />} />
           <Route path="/movies/:id" children={<Movies />} />
           <Route path="/series/:id" children={<TvSeries />} />
-          <Route path="/:mediaType/:id" children={<SinglePage />} />
+          <Route
+            path="/:mediaType/:id"
+            children={<SinglePage addToFav={addToFav} favMovies={favMovies} />}
+          />
           <Route path="/movies/page/:page" children={Movies} />
           <Route path="/series/page/:page" children={TvSeries} />
           <Route path="/trending/page/:page" children={Treading} />
