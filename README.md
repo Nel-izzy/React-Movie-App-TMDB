@@ -13,12 +13,6 @@ This is a responsive web application for viewing in both Mobile and Desktop.
 
 Check out a live demo and try it for yourself: [demo](https://movyz.netlify.app/)
 
-<!-- # ScreenShots -->
-
-## Home Page
-
-<kbd><img src="https://drive.google.com/uc?id=1fEpBRkFQvX3zhUDGflPHDEq7e_j8AZWP"/></kbd>
-
 ## Run these Commands:
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
@@ -42,12 +36,6 @@ These instructions will get you a copy of the project up and running on your loc
 #### Step 5:
 
      npm  start
-
-## Single page
-
-<kbd><img src="https://drive.google.com/uc?id=14xckC8Zbrvz2rUuHkh084pNZVnoarz-J"/></kbd>
-
-##
 
 MIT License
 
